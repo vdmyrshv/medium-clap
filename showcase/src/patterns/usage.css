@@ -17,6 +17,22 @@
     border: 1px solid #896EAF; 
 }
 
+/* Icon */
+
+.icon {
+    fill: darkcyan;
+    stroke-width: 1px;
+    stroke: red;
+    
+}
+
+.icon.checked {
+    fill: #27ae60;
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+  
+
 .cupContainer {
     width: 100px;
     min-height: 100px;
