@@ -151,6 +151,7 @@ const MediumClap = ({children, onClap, style: userStyles = {}, className}) => {
             }))
     }, [])
     
+    
     //below is a design pattern for how to use a ref to get a useEffect hook to fire only after render
     //original useEffect hook is commented out below
     const componentJustMounted = useRef(true);
@@ -193,7 +194,6 @@ const MediumClap = ({children, onClap, style: userStyles = {}, className}) => {
                 {children}
             </button>
         </Provider>
-
   )
 }
 
@@ -231,7 +231,7 @@ const ClapCount = ({style: userStyles = {}, className}) => {
         <span 
             ref={setRef} 
             data-refkey="clapCountRef" 
-            className={styles.count} 
+            className={styles.count}
             style={userStyles}
         >
             + {count}
@@ -241,9 +241,9 @@ const ClapCount = ({style: userStyles = {}, className}) => {
 
 const TotalClap = ({style: userStyles = {}, className}) => {
 
-    const {countTotal, setRef} = useContext(MediumClapContext)
-    const classNames = [styles.total, className].join(' ').trim()
-    
+    const { countTotal, setRef } = useContext(MediumClapContext)
+    const classNames = [styles.total, className].join(" ").trim()
+
     return (
         <span 
             ref={setRef} 
@@ -277,7 +277,7 @@ MediumClap.Total = TotalClap;
     const handleClap = (clapState) => {
         setCount(clapState.count);
     }
-
+    
     return (
         <div style={{width: '100%'}}> 
             <MediumClap onClap={handleClap} className={userCustomStyles.clap} >
